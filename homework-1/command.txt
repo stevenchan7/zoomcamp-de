@@ -1,0 +1,11 @@
+run ingest green taxi data script
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-10.csv.gz"
+
+python ingest_green_taxi_trip_data.py \
+  --user=root \
+  --password=root \
+  --host=localhost \
+  --port=6543 \
+  --db=green_taxi \
+  --table_name=green_taxi_trips \
+  --url=${URL}
